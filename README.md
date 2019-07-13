@@ -139,6 +139,10 @@ public interface IsDominoMessage {
 
 ### Creating a Message
 
+
+## Example
+An implementation of the binding feature can be found here: [Domino-Binidng-Example](https://github.com/NaluKit/domino-binding-example)
+
 ## Note
 At the moment this is only a proof of concept.
 
