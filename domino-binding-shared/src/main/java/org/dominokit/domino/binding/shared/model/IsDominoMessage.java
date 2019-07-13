@@ -4,24 +4,77 @@ import java.util.List;
 
 public interface IsDominoMessage {
 
+  /**
+   * Unique ID
+   *
+   * @return the unique object id
+   */
   String getId();
 
+  /**
+   * Sets the unique id
+   *
+   * @param id sets the unique id
+   */
   void setId(String id);
 
+  /**
+   * The Id of the message
+   *
+   * @return returns the message id
+   */
   String getMessageId();
 
+  /**
+   * sets the message id
+   *
+   * @param messageId the ID of the message
+   */
   void setMessageId(String messageId);
 
+  /**
+   * The error message
+   *
+   * @return the error message
+   */
   String getText();
 
+  /**
+   * sets the error message
+   *
+   * @param text the error message
+   */
   void setText(String text);
 
+  /**
+   * The target of the error message.
+   *
+   * @return the error message
+   */
   Target getTarget();
 
+  /**
+   * set the target
+   *
+   * @param target the target
+   */
   void setTarget(Target target);
 
+  /**
+   * Defines the error source by using the name from the MessagePresenter annotation.
+   * <p/>
+   * It is possible to set more than one error source for a message. In this case
+   * the message wil be displayed on every referenced MessagePresenter
+   *
+   * @return list of error sources
+   */
   List<String> getErrorSources();
 
+  /**
+   * returns a list of the referenced MessagePresenters
+   *
+   * @param errorSources list of message presenters
+   */
   void setErrorSources(List<String> errorSources);
 
   /**
