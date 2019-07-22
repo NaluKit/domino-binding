@@ -1,6 +1,6 @@
-package org.dominokit.domino.binding.client.handling;
+package org.dominokit.domino.binding.message.client.handling;
 
-import org.dominokit.domino.binding.shared.model.IsDominoMessage;
+import org.dominokit.domino.binding.message.shared.model.IsDominoMessage;
 
 import java.util.List;
 

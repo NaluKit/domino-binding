@@ -1,8 +1,8 @@
-package org.dominokit.domino.binding.client.handling;
+package org.dominokit.domino.binding.message.client.handling;
 
 import com.google.gwt.core.client.GWT;
-import org.dominokit.domino.binding.client.internal.helper.MessageElementWrapper;
-import org.dominokit.domino.binding.shared.model.IsDominoMessage;
+import org.dominokit.domino.binding.message.client.internal.helper.MessageElementWrapper;
+import org.dominokit.domino.binding.message.shared.model.IsDominoMessage;
 import org.jboss.gwt.elemento.core.EventType;
 
 import java.util.*;

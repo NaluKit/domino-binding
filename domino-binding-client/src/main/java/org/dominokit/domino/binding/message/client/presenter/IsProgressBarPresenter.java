@@ -1,4 +1,4 @@
-package org.dominokit.domino.binding.client.presenter;
+package org.dominokit.domino.binding.message.client.presenter;
 
 /**
  * interfaces that defines the methods of a progress bar presenter

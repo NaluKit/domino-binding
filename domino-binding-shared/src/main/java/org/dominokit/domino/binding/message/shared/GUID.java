@@ -1,4 +1,4 @@
-package org.dominokit.domino.binding.shared;
+package org.dominokit.domino.binding.message.shared;
 
 /*
  * File: Math.uuid.js

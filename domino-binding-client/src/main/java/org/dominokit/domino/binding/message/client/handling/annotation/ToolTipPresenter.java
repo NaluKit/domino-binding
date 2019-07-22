@@ -1,4 +1,4 @@
-package org.dominokit.domino.binding.client.handling.annotation;
+package org.dominokit.domino.binding.message.client.handling.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,11 +7,11 @@ import java.lang.annotation.Target;
 
 /**
  * This annotation is used to mark a element as
- * message presenter.
+ * tool tip presenter.
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-public @interface MessagePresenter {
+public @interface ToolTipPresenter {
 
   String value();
 

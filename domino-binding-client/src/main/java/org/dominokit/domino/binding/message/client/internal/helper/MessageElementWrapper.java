@@ -1,4 +1,4 @@
-package org.dominokit.domino.binding.client.internal.helper;
+package org.dominokit.domino.binding.message.client.internal.helper;
 
 import elemental2.dom.EventListener;
 import org.dominokit.domino.ui.forms.BasicFormElement;

@@ -1,8 +1,11 @@
-package org.dominokit.domino.binding.client;
+package org.dominokit.domino.binding.message.client;
 
-import org.dominokit.domino.binding.client.presenter.IsProgressBarPresenter;
-import org.dominokit.domino.binding.client.presenter.PresenterRegistration;
+import org.dominokit.domino.binding.message.client.presenter.IsProgressBarPresenter;
+import org.dominokit.domino.binding.message.client.presenter.PresenterRegistration;
+import org.dominokit.domino.binding.message.shared.model.IsDominoMessage;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -48,10 +51,10 @@ public class MessageFactory {
   //  //
   //  //  /* Liste  der Widgets, die Fehlermeldungen am Widget ausgeben koennen. (Gemein hin Eingabe-Fehler) */
   //  //  private Map<String, List<MessagePresenterWidget>> presenterWidgets;
-  //
-  //  /* Liste der Meldungen */
-  //  private List<ClMessage> messageList;
-  //
+
+  /* Liste der Meldungen */
+  private List<? extends IsDominoMessage> messageList;
+
   //  //  /* Liste der Meldungen, die im LiveCycle nur EINMAL angezeigt werden dürfen, auch nach mehrmaligem Einstellen */
   //  //  private List<GsMessage> messageListSingular;
   //  //
@@ -62,7 +65,7 @@ public class MessageFactory {
 
   private MessageFactory() {
     super();
-    //    this.messageList = new ArrayList<>();
+    this.messageList = new ArrayList<>();
     //    //    this.messageListSingular = new ArrayList<>();
     //    //    this.presenterWidgets = new HashMap<>();
     //    //    this.permanentMessagePresenterList = new ArrayList<>();

@@ -14,15 +14,17 @@
  *  the License.
  */
 
-package org.dominokit.binding.processor;
+package org.dominokit.binding.processor.message;
 
 import com.google.auto.service.AutoService;
 import com.squareup.javapoet.*;
-import org.dominokit.domino.binding.client.handling.AbstractMessageDriver;
-import org.dominokit.domino.binding.client.handling.IsMessageDriver;
-import org.dominokit.domino.binding.client.handling.annotation.HasMessageDriverSupport;
-import org.dominokit.domino.binding.client.handling.annotation.MessagePresenter;
-import org.dominokit.domino.binding.client.internal.helper.MessageElementWrapper;
+import org.dominokit.binding.processor.ProcessorException;
+import org.dominokit.binding.processor.ProcessorUtils;
+import org.dominokit.domino.binding.message.client.handling.AbstractMessageDriver;
+import org.dominokit.domino.binding.message.client.handling.IsMessageDriver;
+import org.dominokit.domino.binding.message.client.handling.annotation.HasMessageDriverSupport;
+import org.dominokit.domino.binding.message.client.handling.annotation.MessagePresenter;
+import org.dominokit.domino.binding.message.client.internal.helper.MessageElementWrapper;
 import org.dominokit.domino.ui.forms.BasicFormElement;
 
 import javax.annotation.processing.AbstractProcessor;
@@ -40,7 +42,7 @@ import static java.util.stream.Collectors.toSet;
 import static java.util.stream.Stream.of;
 
 @AutoService(Processor.class)
-public class DominoBindingProcessor
+public class MessageProcessor
     extends AbstractProcessor {
 
   private final static String IMPL_NAME = "MessageDriverImpl";
@@ -49,7 +51,7 @@ public class DominoBindingProcessor
 
   private Map<Element, List<VariableElement>> messagePresenterAnnotatedElements;
 
-  public DominoBindingProcessor() {
+  public MessageProcessor() {
     super();
   }
 
@@ -97,7 +99,7 @@ public class DominoBindingProcessor
   private void generateDriver(Element annotatedElement,
                               List<VariableElement> variableElements)
       throws ProcessorException {
-    TypeSpec.Builder typeSpec = TypeSpec.classBuilder(annotatedElement.getSimpleName() + DominoBindingProcessor.IMPL_NAME)
+    TypeSpec.Builder typeSpec = TypeSpec.classBuilder(annotatedElement.getSimpleName() + MessageProcessor.IMPL_NAME)
                                         .superclass(ParameterizedTypeName.get(ClassName.get(AbstractMessageDriver.class),
                                                                               ClassName.get((TypeElement) annotatedElement)))
                                         .addModifiers(Modifier.PUBLIC,
@@ -143,7 +145,7 @@ public class DominoBindingProcessor
       System.out.println(javaFile.toString());
       javaFile.writeTo(this.processingEnv.getFiler());
     } catch (IOException e) {
-      throw new ProcessorException("Nalu-Message-Processor: Unable to write generated file: >>" + annotatedElement.getSimpleName() + DominoBindingProcessor.IMPL_NAME + "<< -> exception: " + e.getMessage());
+      throw new ProcessorException("Nalu-Message-Processor: Unable to write generated file: >>" + annotatedElement.getSimpleName() + MessageProcessor.IMPL_NAME + "<< -> exception: " + e.getMessage());
     }
   }
 

@@ -1,4 +1,4 @@
-package org.dominokit.domino.binding.client.presenter;
+package org.dominokit.domino.binding.message.client.presenter;
 
 /**
  * Registration of a presenter for the MessageFactory

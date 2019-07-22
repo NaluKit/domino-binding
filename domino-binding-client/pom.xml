@@ -29,7 +29,7 @@
 
   <artifactId>domino-binding-client</artifactId>
 
-  <name>domino-error-binding-client</name>
+  <name>domino-binding-client</name>
   <packaging>jar</packaging>
 
   <properties>
@@ -121,12 +121,12 @@
       <artifactId>domino-binding-shared</artifactId>
       <version>1.0.0-SNAPSHOT</version>
     </dependency>
-    <dependency>
-      <groupId>org.dominokit</groupId>
-      <artifactId>domino-binding-shared</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
-      <scope>compile</scope>
-    </dependency>
+    <!--    <dependency>-->
+    <!--      <groupId>org.dominokit</groupId>-->
+    <!--      <artifactId>domino-binding-shared</artifactId>-->
+    <!--      <version>1.0.0-SNAPSHOT</version>-->
+    <!--      <scope>compile</scope>-->
+    <!--    </dependency>-->
     <!--<dependency>-->
     <!--<groupId>com.github.nalukit</groupId>-->
     <!--<artifactId>nalu-processor</artifactId>-->

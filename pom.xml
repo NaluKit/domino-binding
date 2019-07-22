@@ -26,7 +26,7 @@
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>domino-error-binding</name>
+  <name>domino-binding</name>
 
   <properties>
     <!--&lt;!&ndash; Convenience property to set the GWT version &ndash;&gt;-->

@@ -1,4 +1,4 @@
-package org.dominokit.domino.binding.shared.model;
+package org.dominokit.domino.binding.message.shared.model;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package org.dominokit.domino.binding.client.handling;
+package org.dominokit.domino.binding.message.client.handling;
 
 /**
  * Marks a container as MessageProvider
