@@ -1,9 +1,8 @@
 package org.dominokit.domino.binding.message.client.handling;
 
-import com.google.gwt.core.client.GWT;
 import org.dominokit.domino.binding.message.client.internal.helper.MessageElementWrapper;
 import org.dominokit.domino.binding.message.shared.model.IsDominoMessage;
-import org.jboss.gwt.elemento.core.EventType;
+import org.jboss.elemento.EventType;
 
 import java.util.*;
 
@@ -49,9 +48,9 @@ public abstract class AbstractMessageDriver<P extends IsMessageProvider>
   public void consume(List<? extends IsDominoMessage> messages) {
     List<IsDominoMessage> unconsumedMessages = new ArrayList<>();
     messages.forEach(m -> {
-      GWT.log(IsDominoMessage.Target.FIELD.toString());
-      GWT.log(m.getTarget()
-               .toString());
+//      GWT.log(IsDominoMessage.Target.FIELD.toString());
+//      GWT.log(m.getTarget()
+//               .toString());
       if (IsDominoMessage.Target.FIELD.toString()
                                       .equals(m.getTarget()
                                                .toString())) {
