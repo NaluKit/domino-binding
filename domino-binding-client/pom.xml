@@ -44,7 +44,6 @@
 
     <domino.version>1.0-SNAPSHOT</domino.version>
     <elemental.version>1.0.0-RC1</elemental.version>
-    <nalu-message.version>1.0.0-SNAPSHOT</nalu-message.version>
 
     <!-- GWT needs at least java 1.6 -->
     <maven.compiler.source>1.8</maven.compiler.source>
