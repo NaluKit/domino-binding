@@ -142,7 +142,7 @@ public class MessageProcessor
                                          typeSpec.build())
                                 .build();
     try {
-      System.out.println(javaFile.toString());
+//      System.out.println(javaFile.toString());
       javaFile.writeTo(this.processingEnv.getFiler());
     } catch (IOException e) {
       throw new ProcessorException("Nalu-Message-Processor: Unable to write generated file: >>" + annotatedElement.getSimpleName() + MessageProcessor.IMPL_NAME + "<< -> exception: " + e.getMessage());
